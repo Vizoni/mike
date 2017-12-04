@@ -1,0 +1,17 @@
+<ion-view>
+    <ion-content>
+      <div map-div></div>
+        <!--<div id="map" data-tap-disabled="true"></div>-->
+          <!--<button class="button button-prioridade icon ion-alert-circled" ng-click="StatusEmPrioridadeMaxima()" id="prioridade"></button>-->
+          <ion-footer-bar align-title="left" class="bar-light" style="height: 15%">
+            <div class="button-bar">
+              <button class="button button-assertive icon" id="buttonOnDutyStatus" ng-click="updateOnDutyStatus()"
+                      ng-class="{'mapButtonOnPriority': onDutyStatus == 4, 'mapButtonOnPatrol': onDutyStatus == 1, 'mapButtonOnDisconnected': onDutyStatus == 0}">
+                <i class="ion-alert-circled mapButtonDefault"
+                   ng-class="{'ion-alert-circled': onDutyStatus == 4, 'ion-model-s': onDutyStatus == 1, 'ion-wifi': onDutyStatus == 0}"></i>
+                   {{onDutyStatus}}
+              </button>
+          	</div>
+          </ion-footer-bar>
+    </ion-content>
+</ion-view>

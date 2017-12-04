@@ -1,0 +1,205 @@
+/*  Author: Raphael Vizoni do Prado
+*   Contact: ravizoni@gmail.com
+*   Date:  30/08/2016
+*/
+
+
+/*-------------------------- GENERICAS ------------------------------------ */
+  .spinner svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .font-size-30 {
+    font-size: 30px;
+  }
+
+  .markerLabel {
+     color: #fff;
+     /*background-color: #cc0000;*/
+     background-color: transparent;
+     font-family: "Lucida Grande", "Arial", sans-serif;
+     font-size: 16px;
+     font-weight: 700;
+     text-align: center;
+     width: auto;
+     /*border: 2px solid black;*/
+     white-space: nowrap;
+     margin-top: -30px !important;
+     margin-left: -13px !important;
+    }
+
+/*------------------------- FIM GENERICAS -------------------------------- */
+
+/*--------------------------- REGISTER PAGE ---------------------------------*/
+  .registerBackground {
+    background-color: #003e7d;
+    background-position: center;
+    background-image: url(../img/background.jpeg);
+    background-size: 300%
+  }
+
+  .registerMikeLogo {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .registerHeaderMargin {
+    margin-top: 20px;
+  }
+
+  .registerSectionTitle {
+    text-align: center;
+    color: #000;
+    margin-top: 5px;
+  }
+
+  .registerButton {
+    font-size: 24px;
+  }
+
+  .registerInput {
+    font-size: 20px !important;
+  }
+
+  .registerMarginBottom10 {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .registerComboBoxTitle {
+    float: right;
+    border-radius: 5px;
+  }
+
+  .registerComboBox {
+    margin-left: 5px;
+    width: 60%;
+    border-radius: 5px;
+  }
+
+  .registerToggle {
+    margin-left: 60%;
+  }
+
+  .registerMarginBottomToButton {
+    margin-bottom: 0px !important;
+  }
+
+  .registerFormDivAlert {
+    background-color:#ea2b2b;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 25px;
+    float: left;
+    width: 100%
+  }
+
+  .registerFormSpanAlert {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #fff;
+    position: aboslute;
+    top: 54%;
+  }
+
+/*------------------------ END REGISTER PAGE -------------------------------*/
+
+/*--------------------------- LOGIN PAGE ---------------------------------*/
+
+  .loginInput {
+    font-size: 20px !important;
+  }
+
+  .loginTopLabel {
+    font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;;
+    padding-bottom: 15px;
+  }
+
+  .loginDivTop {
+    width: 100%;
+    text-align: center;
+  }
+
+  .loginMikeLogo {
+    width: 128px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loginRedCircleDelete {
+    /*font-size: 30px;*/
+    font-size: 40px;
+    color: #f02;
+    z-index: 9999;
+    /*margin-top: -57px;*/
+    /*margin-top: -18%;*/
+    /*margin-left: 94px;*/
+    /*margin-left: 33%;*/
+    /*position: fixed;*/
+    float: left;
+    padding: 5px 0px 0px 10px;
+  }
+
+  .loginDivList {
+    margin: 0px 0px 15px 0px !important;
+    float: left;
+  }
+
+  .loginListElement {
+    width: 80%;
+  }
+
+/*------------------------ END LOGIN PAGE -------------------------------*/
+
+/*----------------------------- MAP -------------------------------------*/
+  .button.icon:before, .button.icon-left:before, .button.icon-right:before  {
+    font-size: 50px !important;
+    padding-top: 10px !important;
+  }
+
+  .mapButtonOnPriority:active {
+    background-color: #c72424 !important;
+  }
+
+  .mapButtonOnPriority {
+    background-color: #c72424 !important;
+  }
+
+  .mapButtonOnPatrol:active {
+    background-color: #000099 !important;
+  }
+
+  .mapButtonOnPatrol {
+    background-color: #000099 !important;
+  }
+
+  .mapButtonOnDisconnected:active {
+    background-color: #666666 !important;
+  }
+
+  .mapButtonOnDisconnected {
+    background-color: #666666 !important;
+  }
+
+  .mapButtonDefault {
+    font-size: 80px;
+    display: block;
+    padding-top: 1%;
+  }
+
+  .mapButtonOnPriority {
+    font-size: 80px;
+    display: block;
+    padding-top: 1%;
+  }
+
+
+/*--------------------------- END MAP -----------------------------------*/

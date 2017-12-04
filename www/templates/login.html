@@ -1,0 +1,92 @@
+<ion-view view-title="Login" class="registerBackground" hide-nav-bar="true" ng-controller="loginCtrl">
+<!-- <ion-nav-title><img src="img/logo.png" width="40"></ion-nav-title> -->
+
+  <ion-content class="padding">
+    <div class="row responsive-sm padding remvoeBP">
+  	  <div class="col loginDivTop">
+  			<div class="app-logo" ng-if="occupants.length <= 2" >
+          <center>
+            <img src="img/mike logo.png" class="loginMikeLogo">
+          </center>
+        </div>
+        <label class="loginTopLabel">#{{car.carPrefix}} || tipo carro: {{car.carType}}</label>
+        <!-- =================================================== CARRO ======================================================== -->
+        <div ng-if="car.carType == 1">
+          <form name="loginForm">
+            <div class="list list-inset removePM">
+    		       <label class="item item-input">
+                  <input type="text" class="loginInput" ng-model="occupants.driver" name="occupants_driver" placeholder="RG Motorista" ng-required="true" ng-minlength="8" ng-maxlength="9">
+                </label>
+            </div>
+            <div class="registerFormDivAlert" ng-show="loginForm.occupants.$invalid && loginForm.occupants.$dirty">
+              <span class="registerFormSpanAlert">Preencha os RG's somente números!</span>
+            </div>
+            <div ng-repeat="(key, patrulheiro) in occupants track by $index" ng-if="key >= 1">
+                <div class="list list-inset removePM loginListElement loginDivList">
+                    <label class="item item-input">
+                      <input type="text" class="loginInput" ng-model="occupants.patrolman[key+1]" name="occupants_{{key}}" placeholder="RG Patrulheiro"  ng-required="true" ng-minlength="8" ng-maxlength="9">
+                    </label>
+                </div>
+                <a class="ion-trash-a loginRedCircleDelete" ng-click="deleteOccupant(1)"></a>
+            </div>
+            <div class="registerFormDivAlert" ng-show="loginForm.occupants.$invalid && loginForm.occupants.$dirty">
+              <span class="registerFormSpanAlert">Preencha os RG's somente números!</span>
+            </div>
+            <div class="loginButton" ng-if="occupants.length < 5">
+                <button class="button ion-android-person-add button-block button-assertive font-size-30" ng-click="addOccupant()"> Patrulheiro </button>
+            </div>
+      			<div class="loginButton" ng-if="occupants.length >= 2">
+                <button class="button ion-arrow-right-b button-block button-assertive font-size-30" ng-click="sendDataToLogin()" ng-disabled="loginForm.$invalid"> Login </button>
+           </div>
+           <div class="registerFormDivAlert" ng-show="loginForm.$invalid && loginForm.$dirty">
+             <span class="registerFormSpanAlert">Preencha o RG de todos os ocupantes!</span>
+           </div>
+         </form>
+       </div>
+        <!-- =============================================== FIM CARRO ========================================================== -->
+
+        <!-- =================================================== MOTO ============================================================ -->
+        <div ng-if="car.carType == 2">
+          <form name="loginForm">
+            <div class="list list-inset removePM">
+    		       <label class="item item-input">
+                  <input type="text" class="loginInput" ng-model="occupants.driver" name="occupants_driver" placeholder="RG Motorista"  ng-required="true" ng-minlength="8" ng-maxlength="9">
+                </label>
+            </div>
+            <div ng-repeat="(key, patrulheiro) in occupants track by $index" ng-if="key >= 1">
+                <div class="list list-inset removePM loginListElement loginDivList">
+                    <label class="item item-input">
+                      <input type="text" class="loginInput" ng-model="occupants.patrolman[key+1]" name="occupants" placeholder="RG Patrulheiro"  ng-required="true" ng-minlength="8" ng-maxlength="9">
+                    </label>
+                </div>
+                <a class="ion-trash-a loginRedCircleDelete" ng-click="deleteOccupant(1)"></a>
+            </div>
+
+            <div class="registerFormDivAlert" ng-show="loginForm.occupants.$invalid && loginForm.occupants.$dirty">
+              <span class="registerFormSpanAlert">Preencha os RG's somente números!</span>
+            </div>
+            <div class="loginButton" ng-if="occupants.length < 2">
+                <button class="button ion-android-person-add button-block button-assertive font-size-30" ng-click="addOccupant()"> Patrulheiro </button>
+            </div>
+      			<div class="loginButton" ng-if="occupants.length >= 1">
+                <button class="button ion-arrow-right-b button-block button-assertive font-size-30" ng-click="sendDataToLogin()" ng-disabled="loginForm.$invalid"> Login </button>
+           </div>
+           <div class="registerFormDivAlert" ng-show="loginForm.$invalid && loginForm.$dirty">
+             <span class="registerFormSpanAlert">Preencha o RG de todos os ocupantes!</span>
+           </div>
+         </form>
+       </div>
+        <!-- =============================================== FIM CARRO ========================================================== -->
+      </div>
+      <!-- <div class="loginButton">
+          <button class="button ion-earth button-block button-assertive font-size-30" ng-click="viewMapa()"> Tela Mapa </button>
+     </div>
+      <div class="loginButton">
+          <button class="button ion-earth button-block button-assertive font-size-30" ng-click="reset()"> RESETAR </button>
+     </div>
+     <div class="loginButton">
+         <button class="button button-block button-balanced font-size-30" ng-click="testar()"> Testar </button>
+    </div> -->
+    </div>
+  </ion-content>
+</ion-view>

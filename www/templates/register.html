@@ -1,0 +1,43 @@
+<ion-view class="registerBackground" view-title="Register" hide-nav-bar="true">
+  <ion-content class="padding">
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col registerMarginBottomToButton">
+    		<div class="app-logo">
+            <img src="img/mike logo.png" class="registerMikeLogo">
+        </div>
+        <h3 class="registerSectionTitle loginTopLabel">Registrar Aparelho</h3>
+        <form name="registerForm">
+    		  <label class="item item-input registerMarginBottom10">
+              <input type="text" class="registerInput" name="carPrefix" ng-model="registerData.car_prefix" ng-required="true" ng-minlength="3" ng-maxlength="9" placeholder="Prefixo do Veículo">
+          </label>
+          <div class="registerFormDivAlert" ng-show="registerForm.carPrefix.$invalid && registerForm.carPrefix.$dirty">
+            <span class="registerFormSpanAlert">Preencha o campo corretamente! Ex: 012</span>
+          </div>
+    		  <label class="item item-input registerMarginBottom10">
+            <span class="registerInput registerComboBoxTitle">Batalhão:</span>
+            <select class="registerInput registerComboBox" name="battalion" ng-model="registerData.battalion" ng-required="true">
+              <option>4 BPM</option>
+            </select>
+          </label>
+          <div class="registerFormDivAlert" ng-show="registerForm.battalion.$invalid && registerForm.battalion.$dirty">
+            <span class="registerFormSpanAlert">Campo obrigatório!</span>
+          </div>
+          <label class="item item-input registerMarginBottom10 registerInput">CPU:
+            <label class="toggle toggle-assertive registerToggle">
+               <input type="checkbox" ng-model="registerData.cpu">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+            </label>
+          </label>
+          <label class="item item-input registerMarginBottom10">
+              <input type="text" class="registerInput" ng-model="registerData.device_imei" placeholder="{{imei}}" disabled>
+          </label>
+      		<div class="loginButton">
+            <button class="button ion-checkmark-round button-block button-assertive registerButton registerMarginBottom10" ng-disabled="registerForm.$invalid" ng-click="sendDataToRegister(registerData)"> Cadastrar </button>
+          </div>
+        </form>
+  		</div>
+    </div>
+  </ion-content>
+</ion-view>
